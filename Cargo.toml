@@ -1,0 +1,18 @@
+[package]
+name = "tour"
+version = "0.1.0"
+authors = ["hellooe <hellooe@qq.com>"]
+edition = "2018"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "tour"
+
+[dependencies]
+
+[dependencies.clap]
+version = "2"
+default-features = false
