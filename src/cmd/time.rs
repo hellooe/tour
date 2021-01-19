@@ -1,5 +1,4 @@
 use chrono::{Duration, Local};
-use chrono_tz::Tz;
 
 pub fn with_weeks(weeks: i64) -> String {
     let now = Local::now();
@@ -9,7 +8,7 @@ pub fn with_weeks(weeks: i64) -> String {
 }
 
 pub fn with_timezone(s: &str) -> String {
-    let tz: Tz = s.parse().unwrap();
+    let tz = s.parse::<chrono_tz::Tz>().unwrap();
     let now = Local::now();
     now.with_timezone(&tz).to_string()
 }
