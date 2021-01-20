@@ -1,0 +1,32 @@
+name: tour
+about: 做一些有趣的事
+args: []
+subcommands:
+  - word:
+      about: 转化格式
+      args:
+        - case:
+            short: c
+            long: case
+            help: 请选择转换模式
+            takes_value: true
+        - input:
+            short: i
+            long: input
+            help: 请输入单词内容
+            takes_value: true
+  - time:
+      about: 计算时间
+      args:
+        - weeks:
+            short: w
+            long: weeks
+            help: 请输入周数
+            takes_value: true
+        - timezone:
+            short: t
+            long: timezone
+            help: 请输入时区
+            takes_value: true
+            conflicts_with:
+              - weeks
